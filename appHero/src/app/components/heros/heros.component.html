@@ -1,0 +1,11 @@
+<div class="card-columns">
+  <div class="card" *ngFor="let Hero of Heroes">
+    <img [src]="Hero.img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{Hero.nombre}}</h5>
+      <p class="card-text">{{Hero.bio}}</p>
+      <p class="card-text"><small class="text-muted">Fecha de aparición: {{Hero.aparicion}}</small></p>
+    </div>
+  </div>
+
+</div>
