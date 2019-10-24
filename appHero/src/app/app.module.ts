@@ -5,6 +5,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HerosComponent } from './components/heros/heros.component';
 import { appRouting } from './app.routes';
+import { LoaderComponent } from './components/shared/loader/loader.component';
+import { HeroInformationComponent } from './components/hero-information/hero-information.component';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { appRouting } from './app.routes';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HerosComponent
+    HerosComponent,
+    LoaderComponent,
+    HeroInformationComponent
   ],
   imports: [
     BrowserModule,
