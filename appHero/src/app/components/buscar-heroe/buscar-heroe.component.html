@@ -1,6 +1,6 @@
 <app-loader *ngIf="loading"></app-loader>
 <div class="card-columns" *ngIf="!loading">
-  <div class="card" *ngFor="let Hero of HeroesRecibidos">
+  <div class="card" *ngFor="let Hero of heroesFiltrados">
     <img [src]="Hero.img" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{Hero.nombre}}</h5>
@@ -10,3 +10,4 @@
     </div>
   </div>
 </div>
+

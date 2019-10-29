@@ -1,1 +1,18 @@
-<p>hero-information works!</p>
+<div class="card-columns">
+  <div class=" card">
+    <img [src]="HeroeFlitrado.img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{HeroeFlitrado.nombre}} </h5>
+      <div *ngIf="Marvel">
+        <p class="card-text">Aqui un logo bien chingon de marvel</p><br>
+      </div>
+      <div *ngIf="DC">
+        <p class="card-text">Aqui un logo bien chingon de DC</p><br>
+      </div>
+      <p class="card-text">{{HeroeFlitrado.bio}}</p>
+      <p class="card-text"><small class="text-muted">Fecha de aparición: {{HeroeFlitrado.aparicion}}</small></p>
+      <button type="button" (click)="RegresarHeroes()" name="" id=""
+        class="btn btn-outline-info btn-lg btn-block">Ver todos los heroes </button>
+    </div>
+  </div>
+</div>

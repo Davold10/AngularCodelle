@@ -7,6 +7,7 @@ import { HerosComponent } from './components/heros/heros.component';
 import { appRouting } from './app.routes';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { HeroInformationComponent } from './components/hero-information/hero-information.component';
+import { BuscarHeroeComponent } from './components/buscar-heroe/buscar-heroe.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeroInformationComponent } from './components/hero-information/hero-inf
     HomeComponent,
     HerosComponent,
     LoaderComponent,
-    HeroInformationComponent
+    HeroInformationComponent,
+    BuscarHeroeComponent
   ],
   imports: [
     BrowserModule,
