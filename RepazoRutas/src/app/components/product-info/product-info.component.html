@@ -1,0 +1,15 @@
+<div class="card-columns" data-aos="zoom-in">
+  <div class="card">
+    <img [src]="ProductInfo.imageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ProductInfo.productName}}</h5>
+      <p class="card-text">{{ProductInfo.productCode}}</p>
+      <p class="card-text">{{ProductInfo.releaseDate}}</p>
+      <p class="card-text">{{ProductInfo.description}}</p>
+      <p class="card-text">Price: ${{ProductInfo.price}}</p>
+      <p class="card-text">Rating: {{ProductInfo.starRating}}</p>
+      <button type="button" routerLink="/products" name="" id=""
+        class="btn btn-outline-info btn-lg btn-block">Go back to all products</button>
+    </div>
+  </div>
+ 

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProductsService {
 
-  private products (){
+  private products =
     [{
       "productId": 1,
       "productName": "Leaf Rake",
@@ -101,7 +101,7 @@ export class ProductsService {
       "description": "Pantalla de 13 FHD, Procesador Core i7-8550U, 8GB RAM, 256GB SSD, Sistema operativo Windows 10, Color Ceramic White (13-af002la)",
       "price": 8655.95,
       "starRating": 5.0,
-      "imageUrl": "assets/images/LaptopHP.PNG"
+      "imageUrl": "assets/images/laptopHP.PNG"
   }, {
       "productId": 16,
       "productName": "Asus VivoBook Pro 17 Thin and Portable Laptop",
@@ -146,10 +146,22 @@ export class ProductsService {
       "description": "64 GB Blanco Desbloqueado más Power Bank 2,200 mAh más memoria micro Sd 64 Gb",
       "price": 450.95,
       "starRating": 4.4,
-      "imageUrl": "assets/images/GalaxtM30.PNG"
+      "imageUrl": "assets/images/GalaxyM30.PNG"
   }
 ]
+  
+
+  constructor() {}
+  public ReturnProducts(){
+      return this.products;
   }
 
-  constructor() { }
+  public SelectProduct(id){
+     return this.products.find((SelectedProduct)=>SelectedProduct.productId==id)
+  }
+
+  public SearchProducts(term:string){
+      term = term.toLowerCase();
+      return this.products.filter((product)=> product.productName.toLowerCase().indexOf(term)>-1)
+  }
 }

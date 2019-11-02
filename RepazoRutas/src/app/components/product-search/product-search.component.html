@@ -1,0 +1,15 @@
+<app-loader *ngIf="loading"></app-loader>
+<div class="card-columns" *ngIf="!loading">
+  <div class="card" *ngFor="let Producto of FilteredProducts">
+    <img [src]="Producto.imageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{Producto.productName}}</h5>
+      <p class="card-text">{{Producto.productCode}}</p>
+      <p class="card-text">{{Producto.releaseDate}}</p>
+      <p class="card-text">{{Producto.description}}</p>
+      <p class="card-text">Price: ${{Producto.price}}</p>
+      <p class="card-text">Rating: {{Producto.starRating}}</p>
+      <button type="button" (click)="SendProductInfo(Producto.productId)" name="" id=""
+        class="btn btn-outline-info btn-lg btn-block">More Info...</button>
+    </div>
+  </div>
