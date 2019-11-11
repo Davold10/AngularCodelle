@@ -1,0 +1,87 @@
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <br>
+
+  <table class="table text-center">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Variable</th>
+        <th>Pipe</th>
+        <th>Porducto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>uppercases</td>
+        <td>{{Nombre | uppercase}}</td>
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>lowercase</td>
+        <td>{{Nombre | lowercase}}</td>
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>slice:3</td>
+        <td>{{Nombre | slice:3}}</td>
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>slice:6:15</td>
+        <td>{{Nombre | slice: 6 :15}}</td>
+      </tr>
+      <tr>
+        <td>{{arreglo}}</td>
+        <td>slice:0:4</td>
+        <td>{{arreglo | slice: 0 :4}}</td>
+      </tr>
+      <tr>
+        <td>{{pi}}</td>
+        <td>number</td>
+        <td>{{pi | number:'2.0-4'}}</td>
+      </tr>
+      <tr>
+        <td>{{porcentaje}}</td>
+        <td>percent</td>
+        <td>{{porcentaje | percent}}</td>
+      </tr>
+      <tr>
+        <td>{{porcentaje}}</td>
+        <td>percent parameter</td>
+        <td>{{porcentaje | percent:'2.1'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>{{salario | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency parameter</td>
+        <td>{{salario | currency:'INR'}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date parameters</td>
+        <td>{{fecha | date:'dd-MMMM-yyy'}}</td>
+      </tr>
+      <tr>
+        <td>{{persona}}</td>
+        <td>json</td>
+        <td>{{persona | json}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre2}}</td>
+        <td>capitalizado</td>
+        <td>{{nombre2 | capitalizado}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

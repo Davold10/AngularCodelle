@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-12 text-center text-light">
+        <h2>Search</h2>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="" class="text-light">filter search</label>
+            <select #filter class="custom-select" name="" id="">
+                <option value="null" selected>Select one</option>
+                <option *ngFor="let item of searchFilter" [value]="item">{{item}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+          <label for="" class="text-light" >Type in what you're looking for</label>
+          <input type="text" #termino (keyup)="search(filter.value , termino.value)" class="form-control" placeholder="Type here" aria-describedby="helpId">
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="card-columns">
+        <div class="card" *ngFor="let item of searchResults">
+            <img *ngIf="!item.album" [src]="item.images[1]?.url | noImage" class="card-img-top" alt="...">
+            <img *ngIf="item.album" [src]="item.album.images[1].url " class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" >{{item.name}}</h5>
+              <audio *ngIf="item.album && item.preview_url!=null" [src]="item.preview_url" controls></audio>
+              <p *ngIf="!item.album" class="card-text">
+                  <button type="button" (click)="GotoArtist(item.id)" class="btn btn-outline-success btn-lg btn-block">Ver mas ...</button>
+              </p>
+            </div>
+          </div>
+    </div>
+</div>
