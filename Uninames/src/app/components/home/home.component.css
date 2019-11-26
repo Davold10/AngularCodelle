@@ -1,0 +1,16 @@
+#icon{
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+    padding-top: 1%;
+}
+nav{
+    background: #8FC06C;
+}
+span{
+    color: #ffffff;
+}
+#menu{
+    position: absolute;
+    right: 0;
+}
