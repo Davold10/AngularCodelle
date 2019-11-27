@@ -1,0 +1,9 @@
+.register{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, #61D9debb, #d13af4bb),
+    url('https://wallpaperaccess.com/full/721806.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
